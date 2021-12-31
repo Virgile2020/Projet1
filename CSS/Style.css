@@ -466,24 +466,72 @@ header.active{
     color: var(--black-color);
     padding: 0.5rem 0;
 }
-.deal .row .count-down{
+
+.deal .row .datetime{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    background: #8e8e8f;
+    border-radius: .8rem;
+    width: 40rem;
+    padding: 1rem 0.5rem;
+}
+.deal .row .date{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 1rem;
+}
+.deal .row .time{
+    font-size:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deal .row .time span:not(:last-child){
+    position: relative;
+    margin: 1 8rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+}
+.deal .row .time span:last-child{
+    background: #5abce9;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-top: .2rem;
+    padding: 0 1rem;
+    border-radius: .3rem;
+}
+
+
+
+
+
+
+/*
+.deal .row .datetime{
     display: flex;
     gap: 2rem;
     justify-content: center;
     padding: 0.5rem 0;
 
 }
-.deal .row .count-down h3{
+.deal .row .datetime h3{
     color: var(--orange);
     font-size: 4rem;
 }
-.deal .row .count-down span{
+.deal .row .datetime span{
     color: var(--light-color);
     font-size: 1.5rem;
 }
 
 
-
+*/
 
 
 /**Media query**/

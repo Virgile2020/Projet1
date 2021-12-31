@@ -48,27 +48,28 @@ document.querySelectorAll('.small-image-3').forEach(images =>{
     }
 })
 
-let countDate = new Date('Déc, 00:00:00').getTime();
-function countDown() {
+
+function updateClock() {
+    let now = new Date();
+    let dname = now.getDay(),
+        mo = now.getMonth(),
+        dnum = now.getDate(),
+        yr = now.getFullYear(),
+        hou = now.getHours(),
+        min = now.getMinutes(),
+        sec = now.getSeconds(),
+        pe = "AM";
+    let months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    let week = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+    let ids = ["dayname", "month", "daynum", "year", "hours", "minutes", "secondes", "periodes"];
     
-    let now = new Date().getDate()
-    gap = now - countDate;
-
-    let seconds = 1000;
-    let minutes = seconds * 60;
-    let hours = minutes * 60;
-    let day = hours * 24;
-
-    let d = Math.floor(gap / (day));
-    let h = Math.floor((gap % (day)) / (hours));
-    let m = Math.floor((gap % (hours)) / (minutes));
-    let s = Math.floor((gap % (minutes)) / (seconds));
-
-    document.getElementById('days').innerText=d;
-    document.getElementById('hours').innerText=h;
-    document.getElementById('minutes').innerText=m;
-    document.getElementById('seconds').innerText=s;
 }
+
+function initClock() {
+    updateClock();
+    window.setInterval('updateClock()', 1)
+}
+
 
 let swiper = new Swiper(".produit-slider", {
     slidesPerView: 3,
