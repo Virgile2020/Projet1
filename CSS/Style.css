@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-
 :root{
     --orange:#ff9500;
     --white-color:#ffffff;
@@ -242,6 +241,7 @@ header.active{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    
 }
 .categories .box-container .box{
     height: 30rem;
@@ -254,6 +254,7 @@ header.active{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: .5s linear;
 }
 .categories .box-container .box:hover img{
     transform: scale(1.1);
@@ -303,7 +304,7 @@ header.active{
 .produits .produit-slider .slide .icons{
     position: absolute;
     top:0;right: -7rem;
-    transition: 0.5s linear;
+    transition: .5s linear;
 }
 
 .produits .produit-slider .slide:hover .icons{
@@ -321,6 +322,7 @@ header.active{
     margin-top: 1rem;
 }
 .produits .produit-slider .slide .icons a:hover{
+    transition: .5s linear;
     background: var(--orange);
     color: #fff;
 }
@@ -478,7 +480,7 @@ header.active{
     padding: 1rem 0.5rem;
 }
 .deal .row .date{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     text-align: center;
     letter-spacing: .1rem;
@@ -508,33 +510,60 @@ header.active{
     border-radius: .3rem;
 }
 
-
-
-
-
-
-/*
-.deal .row .datetime{
+.footer .footer-container{
+    background: var(--white-color);
+    border: .1rem solid var(--light-color);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+.footer .footer-container .box-container{
     display: flex;
-    gap: 2rem;
-    justify-content: center;
-    padding: 0.5rem 0;
-
+    flex-wrap: wrap;
+    gap: 1.6rem;
 }
-.deal .row .datetime h3{
+.footer .footer-container .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .footer-container .box-container .box h3{
     color: var(--orange);
-    font-size: 4rem;
+    font-size: 2.5rem;
+    padding: 1rem 0;
 }
-.deal .row .datetime span{
-    color: var(--light-color);
-    font-size: 1.5rem;
+.footer .footer-container .box-container .box a{
+    display: block;
+    color: var(--black-color);
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+    font-weight: 300;
+    transition: .3s linear;
 }
 
+.footer .footer-container .box-container .box a:hover{
+    color: var(--orange);
+}
+.footer .footer-container .box-container .box #mail{
+    text-transform: lowercase;
+}
+.footer .footer-container .box-container .box img{
+    margin-top: 1rem;
 
-*/
+}
 
+.footer .footer-container .credit{
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: .1rem solid var(--light-color);
+    color: var(--black-color);
+    text-align: center;
 
-/**Media query**/
+}
+
+.footer .footer-container .credit span{
+    color: var(--orange);
+}
+
+/*****************************Media query*****************************************************/
 
 @media (max-width:991px) {
     
@@ -588,4 +617,23 @@ header.active{
         font-size: 2.5rem;
         border-bottom: none;
     }
+    .deal .row .content{
+        width: 100%;
+        flex-flow: column;
+    }
+
+    .deal .row .content .datetime{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color: var(--orange);
+        background: var(--white-color);
+        width: 100%;
+        padding: 1rem 0.5rem;
+    }
+    .deal .row .time{
+        
+        flex-flow: column;
+    }
+
 }
